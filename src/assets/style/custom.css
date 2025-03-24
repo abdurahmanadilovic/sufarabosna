@@ -1,0 +1,20 @@
+/* Minimal custom CSS to supplement Bootstrap */
+.text-brown {
+    color: brown !important;
+}
+
+.text-brown:hover {
+    color: tomato !important;
+}
+
+.border-brown {
+    border-color: brown !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+} 
