@@ -28,10 +28,6 @@ header {
     padding: 0.5rem 1rem !important;
 }
 
-.nav-link:hover {
-    color: tomato !important;
-}
-
 .social-container {
     display: flex;
     justify-content: center;
@@ -150,3 +146,4 @@ img {
         width: 90%;
     }
 } 
+

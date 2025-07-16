@@ -6,6 +6,16 @@
   <title>SUFARA I TEDŽVID OSNOVE</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11495608984"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-11495608984');
+  </script>
   <style>
     .text-brown {
       color: #5a3c1a;
@@ -25,29 +35,31 @@
     <header class="sticky-top">
         <div class="container-fluid">
       
-          <!-- ✅ Full Navbar -->
+          
           <nav class="navbar navbar-expand-lg bg-success bg-opacity-50 border-bottom border-success-subtle rounded flex-column">
       
-            <!-- ✅ First Row: Centered Title -->
+            
             <div class="w-100 text-center py-2">
               <a class="fw-bold fs-3 text-brown text-decoration-none" href="index.html">
                 SUFARA I TEDŽVID OSNOVE
               </a>
             </div>
       
-            <!-- ✅ Second Row: Toggler + Collapsible Links -->
+           
             <div class="container-fluid">
-              <!-- Mobile Quran quote -->
+              <!-- Mobile Quran -->
               <div class="d-block d-sm-none mb-2">
-                <p class="text-brown m-0 cursor-pointer" onclick="goHome()" dir="rtl" lang="ar">رَبِّ زِدْنِي عِلْمًا</p>
-                <p class="text-brown m-0 medium-text">"Gospodaru moj, povećaj mi znanje."</p>
-                <p class="text-brown m-0 small-text">Sura Ta-Ha, 16. džuz, 114. ajet str.434 - Prijevod Kur'ana od Čauševića</p>
+                <p class="text-brown m-0 small-text">Dova za bolje pamćenje:</p>
+                <p class="text-brown m-0 cursor-pointer arabic-text" onclick="goHome()" dir="rtl" lang="ar">رَبِّ زِدْنِي   عِلْمًا 
+                <img src="/src/assets/114.png" class="img-fluid ms-2" style="height: 24px"><span style="font-size: 16px">RABBI ZIDNĪ 'ILMĀ </span></p>
+                <p class="text-brown m-0 medium-text"></p>
+                <p class="text-brown m-0 medium-text "> <strong>"Gospodaru moj, povećaj mi znanje!"</strong></p>
+                <p class="text-brown m-0 small-text">Sura Taha, 16. džuz, 114. ajet str.434 - Prijevod Kur'ana Časnog od Čauševića</p>
               </div>
       
               <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-      
+              </button>    
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav text-center">
                   <li class="nav-item"><a class="nav-link text-brown" href="zbirna-tabela.html">Zbirna tabela</a></li>
@@ -56,10 +68,9 @@
                   <li class="nav-item"><a class="nav-link text-brown" href="zabiljeske.html">Zabilješke</a></li>
                   <li class="nav-item"><a class="nav-link text-brown" href="dzenazetska-dova.html">Dženazetska dova</a></li>
                   <li class="nav-item"><a class="nav-link text-brown" href="ajeti-za-izlijecenje.html">Ajeti za izliječenje</a></li>
-                  <li class="nav-item"><a class="nav-link text-brown" href="redzebskenafile.html">Redžebske nafile</a></li>
-                  <li class="nav-item"><a class="nav-link text-brown" href="redzebskenafile.html">Nada i milost u Allaha dž.š.</a></li>
-                  <li class="nav-item"><a class="nav-link text-brown" href="redzebskenafile.html">Lejletu-l-Kadr</a></li>
-                 
+                  <li class="nav-item"><a class="nav-link text-brown" href="kursarapskog.html">Kurs sufare</a></li>
+                  <li class="nav-item"><a class="nav-link text-brown" href="redzebskenafile.html">Nada u milost Allaha dž.š.</a></li>
+                  <li class="nav-item"><a class="nav-link text-brown" href="redzebskenafile.html">Lejletu-l-Kadr</a></li>               
                 </ul>
               </div>
             </div>

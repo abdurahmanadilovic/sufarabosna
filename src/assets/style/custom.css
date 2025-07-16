@@ -15,6 +15,17 @@
     cursor: pointer;
 }
 
-.active {
+.nav-link.active {
     font-weight: bold;
 } 
+
+@font-face {
+    font-family: 'KuranKerimFontAbay';
+    src: url('/src/assets/KuranKerimFontAbay.ttf') format('truetype');
+  }
+  
+.arabic-text {
+    font-family: 'KuranKerimFontAbay', serif;
+    direction: rtl;
+    font-size: 24px; 
+  }

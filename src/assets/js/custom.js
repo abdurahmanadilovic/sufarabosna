@@ -48,20 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Function to toggle active class on navigation links
-function toggle(id) {
-    // Remove active class from all links
-    const links = document.querySelectorAll('.link');
-    links.forEach(link => {
-        link.classList.remove('active');
-    });
-    
-    // Add active class to clicked link
-    const clickedLink = document.getElementById(id);
-    if (clickedLink) {
-        clickedLink.classList.add('active');
-    }
-}
 
 // Initialize Bootstrap tooltips
 document.addEventListener('DOMContentLoaded', function() {

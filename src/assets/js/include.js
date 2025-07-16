@@ -22,8 +22,8 @@ function includeHTML() {
                     }
                     parentElement.removeChild(element);
                     
-                    // Set active link based on current page
-                    setActiveLink();
+                    // Set up navigation after includes are loaded
+                    setupNavigation();
                 }
             }
             xhttp.open("GET", file, true);
@@ -32,18 +32,52 @@ function includeHTML() {
     }
 }
 
-// Function to set active link in navigation
-function setActiveLink() {
-    const currentPage = window.location.pathname.split('/').pop();
+// Function to set up navigation
+function setupNavigation() {
+    // Set active link based on current page
+    setActiveLink();
+    
+    // Add click event listeners to nav links
+    const navLinks = document.querySelectorAll('.nav-link:not([target="_blank"])');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // For same-page navigation, update active state
+            if (this.getAttribute('href') && !this.getAttribute('href').startsWith('http')) {
+                setActiveLink(this);
+            }
+        });
+    });
+}
+
+// Function to set active link
+function setActiveLink(clickedLink = null) {
     const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop();
     
     navLinks.forEach(link => {
+        link.classList.remove('active');
+        
         const href = link.getAttribute('href');
-        if (href === currentPage) {
+        
+        // If this is a clicked link, make it active
+        if (clickedLink && link === clickedLink) {
             link.classList.add('active');
+            localStorage.setItem('activeNavLink', href);
+        }
+        // Otherwise check if it matches current page or stored active link
+        else if (!clickedLink) {
+            const storedActiveLink = localStorage.getItem('activeNavLink');
+            if (href === currentPage || href === storedActiveLink) {
+                link.classList.add('active');
+            }
         }
     });
 }
 
 // Execute when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', includeHTML); 
+document.addEventListener('DOMContentLoaded', function() {
+    includeHTML();
+    
+    // Also set up navigation in case there are no includes
+    setupNavigation();
+});
