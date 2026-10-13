@@ -124,6 +124,41 @@ body {
     filter: brightness(0) invert(1);
 }
 
+
+/* Hamburger menu */
+.site-navbar .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 6px 10px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Mobile layout */
+@media (max-width: 991.98px) {
+    .site-navbar .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .site-navbar .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+        margin-bottom: 0 !important;
+    }
+
+    .site-navbar .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+
 /* Dova na mobilnim uređajima */
 
 .mobile-dua {
@@ -528,7 +563,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 70px 20px;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
 
     /* Replace with your mosque and garden image */
@@ -616,8 +651,7 @@ body {
     .hero-section {
         min-height: 400px;
         padding: 50px 16px;
-        margin: 12px auto;
-        border-radius: 8px;
+        margin: 0;
     }
 
     .hero-badge {
