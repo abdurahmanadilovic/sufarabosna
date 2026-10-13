@@ -2,9 +2,9 @@
 /* ========================================
    OSNOVNI STILOVI
 ======================================== */
-
 body {
     font-family: "Outfit", sans-serif !important;
+    background-color: #cae6cf !important;
 }
 
 
@@ -35,8 +35,6 @@ body {
 .medium-text {
     font-size: 15px;
 }
-
-
 
 /* ========================================
    ARAPSKI TEKST
@@ -337,7 +335,7 @@ body {
 
 .footer-text {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 12px;
 
@@ -651,7 +649,7 @@ body {
     padding: 60px 4%;
     background: linear-gradient(
         180deg,
-        #ffffff 0%,
+        #cae6cf 0%,
         #f7faf6 100%
     );
 }
