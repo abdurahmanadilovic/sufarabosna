@@ -23,17 +23,60 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="mb-4">
-                    <div class="btn-group" role="group" aria-label="Language selection">
-                        <button onclick="toggleLanguage('bosnian')" id="bosnianBtn" class="btn btn-outline-success fw-bold">Bosanski</button>
-                        <button onclick="toggleLanguage('english')" id="englishBtn" class="btn btn-outline-success">English</button>
-                        <button onclick="toggleLanguage('italian')" id="italianBtn" class="btn btn-outline-success">Italiano</button>
-                        <button onclick="toggleLanguage('russian')" id="russianBtn" class="btn btn-outline-success">Русский</button>
-                        <button onclick="toggleLanguage('german')" id="germanBtn" class="btn btn-outline-success">Deutsch</button>
-                        <button onclick="toggleLanguage('arabic')" id="arabicBtn" class="btn btn-outline-success">عربي</button>
-                        <button onclick="toggleLanguage('indonesian')" id="indonesianBtn" class="btn btn-outline-success">Indonesia</button>
-                        <button onclick="toggleLanguage('chinese')" id="chineseBtn" class="btn btn-outline-success">中國人</button>
-                       
-                    </div>
+                    
+                    <div class="language-buttons mb-4"
+                    role="group"
+                    aria-label="Language selection">
+
+                    <button onclick="toggleLanguage('bosnian')"
+                        id="bosnianBtn"
+                        class="btn btn-outline-success fw-bold active-language">
+                    Bosanski
+                    </button>
+
+                    <button onclick="toggleLanguage('english')"
+                        id="englishBtn"
+                        class="btn btn-outline-success">
+                    English
+                    </button>
+
+                    <button onclick="toggleLanguage('italian')"
+                        id="italianBtn"
+                        class="btn btn-outline-success">
+                    Italiano
+                    </button>
+
+                    <button onclick="toggleLanguage('russian')"
+                        id="russianBtn"
+                        class="btn btn-outline-success">
+                    Русский
+                    </button>
+
+                    <button onclick="toggleLanguage('german')"
+                        id="germanBtn"
+                        class="btn btn-outline-success">
+                    Deutsch
+                    </button>
+
+                    <button onclick="toggleLanguage('arabic')"
+                        id="arabicBtn"
+                        class="btn btn-outline-success">
+                    عربي
+                    </button>
+
+                    <button onclick="toggleLanguage('indonesian')"
+                        id="indonesianBtn"
+                        class="btn btn-outline-success">
+                    Indonesia
+                    </button>
+
+                    <button onclick="toggleLanguage('chinese')"
+                        id="chineseBtn"
+                        class="btn btn-outline-success">
+                    中文
+                    </button>
+
+                    </div>  
                 </div>
                 
                 <div id="bosnianContent" class="mx-auto" style="max-width: 800px;">
@@ -178,22 +221,31 @@
 
                 <div id="arabicContent" class="mx-auto" style="max-width: 800px; display: none;">
                     <h1 class="text-success mb-4">مقدمة عن الجدول</h1>
-                    <p class="text-start">
+
+                    <p class="arabic-text">
+                        مواد تعليمية تتيح للعرب تعلم اللغة البوسنية على يد عرب:
+                        <a href="https://youtube.com/playlist?list=PLo2dU2uZM_yCrHkwHGfqymnNmdYj4NX5E&si=ZaAX_r9wvxqC6eho"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        تعليم اللغة الصربية للعرب - شج محمد ناصر
+                     </a>   
+                    </p>
+                    <p class="arabic-text">
                         يحتوي الجدول على ملخص لأحكام كتابي السفارا والتجويد. والهدف الرئيسي من المشروع هو عرض جميع الأحكام في صورة واحدة (يتكون الجدول الموجز من سبعة جداول منفصلة، ​​ويتضمن المحتوى جداول قابلة للطباعة).
                     </p>
-                    <p class="text-start">
+                    <p class="arabic-text">
                         يحتوي كل حرف على خمسة شروح من مؤلفي السفارا المختلفين، لتسهيل فهم جوهر كل حرف. ترتيب الحروف مشابه في شكله لكتاب السفارا "حرف كريمة القرآن" (الموجود في المحتوى تحت اسم "سفارا") للخطاط العالمي الشهير أشرف كوفاتشيفيتش (الذي نسخ المصحف كاملاً بخط يده، وقامت منظمة "مرحامت" الإنسانية بطباعة عشرة آلاف نسخة منه ووزعها كهديات).
                     </p>
-                    <p class="text-start">
+                    <p class="arabic-text">
                         أظهرت خمسون عامًا من عمله مع مختلف الشعوب الحاجة إلى طريقة جديدة مُصممة خصيصًا للشعوب التي لا تتحدث العربية، لتسهيل حفظ الحروف والتعرف عليها. قام بفصل 19 حرفًا (مشابهة تقريبًا لحرفنا)، يكون الفتح فوقها دائمًا حرف ياء قصير، وعندما يكون منفردًا (يُشار إليه بإشارات تدل على طول الفتح فيتحول إلى ياء طويلة، وبحذف طول الفتح يعود إلى ياء قصيرة). أما الأحرف التسعة الأخرى (أكبر حجمًا، وغير مألوفة في لغتنا)، فيكون الفتح فوقها دائمًا حرف آ قصيرة، وعندما يكون منفردًا (بحذف طول الآ يعود إلى آ قصيرة). يبلغ مجموع الأحرف 28 حرفًا.
                     </p>
-                    <p class="text-start">
+                    <p class="arabic-text">
                         صورة للمهاريج (الموضع الصحيح لأصل الأحرف - وهو أمر إلزامي) من المصحف الإندونيسي. جمعية "جيرميلون" (نتعلم أسرع) = خفيف، غداء، أكل، قليل، أبدًا، ساخن. "كتب" = نعم، بي، دابي، تا، كتاب. إلخ. ترتيب الحروف في القواعد ليس تقليديًا، ولكنه مألوف لدينا، حيث رُتبت بشكل رمزي في الجدول، ووُضعت عليها علامات بالأرقام والألوان، وما إلى ذلك، لتسهيل فهم المواضيع ومعرفة ما تبقى من القواعد.
                     </p>
-                    <p class="text-start">
+                    <p class="arabic-text">
                         استُخدمت المراجع المحلية فقط، ويمكن تسمية هذا المنهج بـ"منهج البوسنة". لم يُستعن بأي شيء من الإنترنت، فالفكرة محلية، وكل شيء كُتب يدويًا، ورُسم، ثم عُولج رقميًا. سأكون سعيدًا وممتنًا لكل من يُحسّن هذا المشروع تقنيًا.
                     </p>
-                    <p class="text-start">
+                    <p class="arabic-text">
                         تُدرج الحاشية المراجع المتخصصة التي استخدمها المؤلفون المحليون، والخبراء الاستشاريون، وحفيظو اللغة، ومصمم الجدول، وجميعهم من مدينة فيسوكو، البوسنة والهرسك. نسأل الله أن يرضى عن هذا العمل، وأن يجزي كل من ساهم أو سيساهم في تحسين هذا المشروع والموقع الإلكتروني. آمين.
                     </p>
                 </div>
@@ -263,8 +315,11 @@
                 </div>
             </div>
         </div>
-    </main>
 
+       
+
+    </main>
+    <include src="footer.html"></include>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->

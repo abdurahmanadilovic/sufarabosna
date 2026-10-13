@@ -1,4 +1,5 @@
 /* Minimal custom CSS to supplement Bootstrap */
+
 .text-brown {
     color: brown !important;
 }
@@ -53,5 +54,112 @@
     .book-pages {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+}
+
+
+.language-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.language-buttons .btn {
+    flex: 0 0 auto;
+    border-radius: 6px !important;
+    white-space: nowrap;
+}
+
+/* Smaller screens */
+@media (max-width: 576px) {
+    .language-buttons {
+        gap: 6px;
+    }
+
+    .language-buttons .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+/* Footer */
+.site-footer {
+    background-color: #14532d;
+    color: #ffffff;
+    border-top: 4px solid #9bd4ac;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.2rem;
+}
+
+.footer-text {
+    color: #e5eee7;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    max-width: 420px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.65rem;
+}
+
+.footer-link,
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-links a:hover {
+    color: #9bd4ac;
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.25);
+    margin: 2rem 0 1.5rem;
+}
+
+.footer-bottom {
+    color: #ffffff;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.footer-small {
+    color: #d4e5d8;
+    font-size: 0.8rem;
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .site-footer .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-title {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-divider {
+        margin: 1.5rem 0 1rem;
     }
 }
