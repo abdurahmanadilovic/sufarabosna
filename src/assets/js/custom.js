@@ -24,7 +24,7 @@ function toggleCollapsible(button) {
 
 // Function to toggle language in the introduction page
 function toggleLanguage(lang) {
-    const languages = ['bosnian', 'english', 'russian', 'italian', 'german', 'arabic', 'indonesian', 'chinese'];
+    const languages = ['bosnian', 'english', 'russian', 'italian', 'german', 'arabic', 'swedish', 'indonesian', 'chinese', ];
     languages.forEach(l => {
         const content = document.getElementById(`${l}Content`);
         const button = document.getElementById(`${l}Btn`);
