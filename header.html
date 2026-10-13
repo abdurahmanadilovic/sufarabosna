@@ -6,6 +6,7 @@
   <title>SUFARA I TEDŽVID OSNOVE</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="src/assets/style/custom.css">
 
   <!-- Google Analytics 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-11495608984"></script>
@@ -26,75 +27,64 @@
 
   gtag('config', 'G-PQCZ47SJTH');
   </script>
-
-  <style>
-    .text-brown {
-      color: #5a3c1a;
-    }
-    .small-text {
-      font-size: 10px;
-    }
-    .medium-text {
-      font-size: 15px;
-    }
-    .cursor-pointer {
-      cursor: pointer;
-    }
-    .fixed {
-      position: fixed;
-    }
-  </style>
 </head>
+
 <body>
     <header class="sticky-top" >
-        <div class="container-fluid">         
-          <nav style="background-color: #9bd4ac" class="navbar navbar-expand-lg border-bottom border-success-subtle rounded flex-column">
+        <div class="w-100">         
+          <nav class="navbar navbar-expand-lg site-navbar flex-column">
                 
-            <div class="w-100 text-center py-2">
-              <a class="fw-bold fs-3 text-brown text-decoration-none" href="index.html">
-                SUFARA I TEDŽVID OSNOVE
-              </a>
+            <div class=" text-center py-2">
+              <a class="navbar-brand-title fs-3 text-decoration-none" href="index.html"> SUFARA I TEDŽVID OSNOVE</a>
             </div>
       
            
-            <div class="container-fluid">
-              <!-- Mobile Quran -->
-              <div class="d-block d-sm-none mb-2">
-                <p class="text-brown m-0 small-text">Dova za bolje pamćenje:</p>
-                <p class="text-brown m-0 cursor-pointer arabic-text" onclick="goHome()" dir="rtl" lang="ar">رَبِّ زِدْنِي   عِلْمًا 
-                <img src="/src/assets/114.png" class="img-fluid ms-2" style="height: 24px"><span style="font-size: 16px">RABBI ZIDNĪ 'ILMĀ </span></p>
-                <p class="text-brown m-0 medium-text"></p>
-                <p class="text-brown m-0 medium-text "> <strong>"Gospodaru moj, povećaj mi znanje!"</strong></p>
-                <p class="text-brown m-0 small-text">Sura Taha, 16. džuz, 114. ajet str.434 - Prijevod Kur'an Časni od Čauševića</p>
-              </div>
-      
+            <div class="container-fluid">      
               <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>    
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav text-center">
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="uvod.html">Uvod / Introduction / Einführung / مُقَدِّمَة</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="zbirna-tabela.html">Zbirna tabela</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="pojedinacne-tabele.html">Pojedinačne tabele</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" target="_blank" href="SufaraEšrefKovačević.pdf">Sufara <span class="small-text">- prof. Ešref Kovačević</span></a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="zabiljeske.html">Zabilješke</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="ajeti-za-izlijecenje.html">Ajeti za izliječenje</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="kursarapskog.html">Kurs sufare i tedžvida</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="nada-u-milost.html">Nada u milost Allaha dž.š.</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="lejletu-l-kadr.html">Kur'an, post i Lejletu-l-Kadr</a></li>
-                  <li class="nav-item"><a class="nav-link medium-text text-brown" href="dova-za-valjano-potomstvo.html">Kur'anska dova za valjano potomstvo</a></li>               
+                  <li class="nav-item"><a class="nav-link medium-text" href="uvod.html">Uvod / Introduction / Einführung / مُقَدِّمَة</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="index.html">Zbirna tabela</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="pojedinacne-tabele.html">Pojedinačne tabele</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" target="_blank" href="SufaraEšrefKovačević.pdf">Sufara <span class="small-text">- prof. Ešref Kovačević</span></a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="zabiljeske.html">Zabilješke</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="ajeti-za-izlijecenje.html">Ajeti za izliječenje</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="kursarapskog.html">Kurs sufare i tedžvida</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="nada-u-milost.html">Nada u milost Allaha dž.š.</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="lejletu-l-kadr.html">Kur'an, post i Lejletu-l-Kadr</a></li>
+                  <li class="nav-item"><a class="nav-link medium-text" href="dova-za-valjano-potomstvo.html">Kur'anska dova za valjano potomstvo</a></li>               
                 </ul>
               </div>
             </div>
           </nav>
+          
         </div>
       </header>
+      <!--<div class="mobile-dua">
+        <div class="dua-content">            
+            <div class="dua-translation">
+              <span class="small-text">Dova za bolje pamćenje:</span> 
+                <p class="text-brown"><strong>„Gospodaru moj, povećaj mi znanje!“ </strong> </p>
+                <span class="text-brown small-text">
+                  Sura Taha, 114. ajet, str. 434
+                </span>
+                
+            </div>
+            <div class="dua-arabic" dir="rtl" lang="ar">
+              رَبِّ زِدْنِي عِلْمًا
+              <img src="/src/assets/114.png" alt="114. ajet">
+              <p class="text-brown small-text">RABBI ZIDNī 'ILMā</p>
+          </div>
+        </div>
+    </div>-->
       
 
 <!-- Info Section -->
-<div class="container mt-3">
-  <div class="d-flex justify-content-center align-items-center border border-brown rounded-pill py-2 px-3 mx-auto" style="max-width: 350px; cursor: pointer;" onclick="goToFbPage()">
-    Više informacija na facebook stranici:
+<div class="container py-1 text-brown">
+  <div class="d-flex justify-content-center align-items-center mx-auto" style="max-width: 350px; cursor: pointer;" onclick="goToFbPage()">
+    Više informacija na facebook stranici:    
     <a class="text-primary ms-1" href="https://m.facebook.com/Sufara-i-ted%C5%BEvid-osnove-testna-verzija-1992735521023625/">
       <i class="fa-brands fa-facebook fs-4"></i>
     </a>

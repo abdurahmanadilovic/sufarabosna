@@ -9,10 +9,14 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Custom fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/assets/style/custom.css">
+
+
     
     <!-- <meta name="google-site-verification" content="mU9qz97SqsLr3rcoWbTaH1PYtv8RRhKNQb6oQZU_iiY" /> -->
     <meta name="keywords" content="Sufara Tedžvid Osnove Kur'ansko pismo Harfovi osnove sufare osnove tedžvida arapsko pismo">
@@ -31,6 +35,90 @@
     <!-- Include Header -->
     <include src="header.html"></include>
 
+<!-- Landing Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content text-center">
+        <span class="hero-badge">
+            <i class="fa-solid fa-book-open me-2"></i>
+            Znanje • Edukacija • Inspiracija
+        </span>
+
+        <h1>Dobrodošli na edukativnu platformu</h1>
+
+        <p class="hero-description">
+            Otkrijte ljepotu učenja sufare i tedžvida kroz pregledne tabele,
+            korisne materijale i sadržaje koji vam pomažu da učite
+            vlastitim tempom.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="uvod.html" class="btn hero-btn-primary">
+                <i class="fa-solid fa-book-open me-2"></i>
+                Započnite učenje
+            </a>
+
+            <a href="zbirna-tabela.html" class="btn hero-btn-secondary">
+                <i class="fa-solid fa-table me-2"></i>
+                Pregledajte tabele
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Dua Section -->
+<section class="dua-section">
+    <div class="container dua-container">
+        <div class="dua-content">
+
+            <!-- Translation on the LEFT -->
+            <div class="dua-translation">
+                <span class="translation-label">
+                    <i class="fa-solid fa-book-open"></i>
+                    Dova za povećanje znanja
+                </span>
+
+                <span class="quote-mark">“</span>
+
+                <blockquote>
+                    Gospodaru moj, povećaj mi znanje!
+                </blockquote>
+
+                <div class="quote-divider"></div>
+
+                <p class="dua-reference">
+                    Kur'an, sura Taha, 114. ajet
+                </p>
+            </div>
+
+            <!-- Arabic Dua on the RIGHT -->
+            <div class="dua-arabic" dir="rtl" lang="ar">
+                <span class="dua-label">
+                    دُعَاءُ طَلَبِ الْعِلْمِ
+                </span>
+
+                <div class="arabic-line">
+                    <p class="arabic-text">
+                        رَبِّ زِدْنِي عِلْمًا
+                    </p>
+
+                    <img
+                        src="/src/assets/114.png"
+                        alt="Oznaka 114. ajeta"
+                    >
+                </div>
+
+                <p class="dua-transliteration" dir="ltr">
+                    Rabbi zidnī ‘ilmā
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
     <main class="container my-4">
         <div class="row">
             <div class="col-12">
@@ -38,7 +126,7 @@
             </div>
         </div>
     </main>
-    
+
     <include src="footer.html"></include>
 
     <!-- Bootstrap JS Bundle with Popper -->

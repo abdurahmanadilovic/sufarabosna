@@ -1,38 +1,182 @@
-/* Minimal custom CSS to supplement Bootstrap */
+
+/* ========================================
+   OSNOVNI STILOVI
+======================================== */
+
+body {
+    font-family: "Outfit", sans-serif !important;
+}
+
 
 .text-brown {
-    color: brown !important;
+    color: #5a3c1a !important;
 }
 
 .text-brown:hover {
-    color: tomato !important;
+    color: #76532f !important;
 }
 
 .border-brown {
-    border-color: brown !important;
+    border-color: #5a3c1a !important;
 }
 
 .cursor-pointer {
     cursor: pointer;
 }
 
-.nav-link.active {
-    font-weight: bold;
-} 
+.fixed {
+    position: fixed;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+.medium-text {
+    font-size: 15px;
+}
+
+
+
+/* ========================================
+   ARAPSKI TEKST
+======================================== */
 
 @font-face {
     font-family: 'KuranKerimFontAbay';
     src: url('/src/assets/KuranKerimFontAbay.ttf') format('truetype');
-  }
-  
+    font-display: swap;
+}
+
 .arabic-text {
     font-family: 'KuranKerimFontAbay', serif;
     direction: rtl;
-    font-size: 24px; 
-  }
+    font-size: 24px;
+}
 
 
-  .book-pages {
+/* ========================================
+   HEADER / NAVIGACIJA
+======================================== */
+
+.site-navbar {
+    background-color: #5a3c1a;
+    border-bottom: 3px solid #9bd4ac !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Naziv stranice */
+
+.site-navbar .navbar-brand-title {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.site-navbar .navbar-brand-title:hover,
+.site-navbar .navbar-brand-title:focus-visible {
+    color: #9bd4ac;
+}
+
+/* Linkovi u navigaciji */
+
+.site-navbar .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 15px;
+    padding: 10px 12px;
+    margin: 2px 3px;
+    border-radius: 6px;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Hover i fokus efekat */
+
+.site-navbar .navbar-nav .nav-link:hover,
+.site-navbar .navbar-nav .nav-link:focus-visible {
+    color: #ffffff !important;
+    background-color: #76532f;
+    transform: translateY(-2px);
+}
+
+/* Aktivna stranica */
+
+.site-navbar .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #76532f;
+    font-weight: 700;
+}
+
+/* Hamburger dugme */
+
+.site-navbar .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(155, 212, 172, 0.4);
+}
+
+/* Bijela hamburger ikonica */
+
+.site-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Dova na mobilnim uređajima */
+
+.mobile-dua {
+    background-color: #f8f4ed;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.mobile-dua p {
+    margin-bottom: 3px !important;
+}
+
+.mobile-dua .dua-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(12px, 5vw, 100px);
+    flex-wrap: wrap;
+}
+
+.mobile-dua .dua-arabic {
+    direction: rtl;
+    font-family: 'KuranKerimFontAbay', serif;
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+.mobile-dua .dua-translation {
+    font-size: 13px;
+    text-align: left;
+}
+
+.mobile-dua img {
+    height: 20px;
+    width: auto;
+}
+
+
+/* ========================================
+   KNJIGA / PRIKAZ STRANICA
+======================================== */
+
+.book-pages {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
@@ -49,14 +193,10 @@
     border: 1px solid #e5e5e5;
 }
 
-/* On phones, display one page at a time */
-@media (max-width: 576px) {
-    .book-pages {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-}
 
+/* ========================================
+   JEZIČKA DUGMAD
+======================================== */
 
 .language-buttons {
     display: flex;
@@ -73,20 +213,11 @@
     white-space: nowrap;
 }
 
-/* Smaller screens */
-@media (max-width: 576px) {
-    .language-buttons {
-        gap: 6px;
-    }
 
-    .language-buttons .btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-}
+/* ========================================
+   FOOTER
+======================================== */
 
-
-/* Footer */
 .site-footer {
     background-color: #14532d;
     color: #ffffff;
@@ -95,7 +226,7 @@
 
 .footer-title {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06em;
     margin-bottom: 1.2rem;
@@ -103,7 +234,7 @@
 
 .footer-text {
     color: #e5eee7;
-    font-size: 0.92rem;
+    font-size: 12px;
     line-height: 1.8;
     max-width: 420px;
 }
@@ -118,11 +249,13 @@
     margin-bottom: 0.65rem;
 }
 
+/* Footer linkovi */
+
 .footer-link,
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: 12px;
     transition: color 0.2s ease;
 }
 
@@ -132,10 +265,14 @@
     text-decoration: underline;
 }
 
+/* Razdjelna linija */
+
 .footer-divider {
     border-color: rgba(255, 255, 255, 0.25);
     margin: 2rem 0 1.5rem;
 }
+
+/* Copyright */
 
 .footer-bottom {
     color: #ffffff;
@@ -148,7 +285,205 @@
     font-size: 0.8rem;
 }
 
+
+/* =========================
+   FOOTER LAYOUT
+========================= */
+
+.site-footer {
+    background-color: #14532d;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Column headings */
+.footer-title {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+    padding-bottom: 14px;
+
+    color: #9bd4ac;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.6;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Contact details */
+.footer-info {
+    width: 100%;
+    max-width: 420px;
+}
+
+.footer-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.footer-text > i {
+    min-width: 18px;
+    margin-top: 5px;
+    color: #9bd4ac;
+}
+
+.footer-text span {
+    text-align: left;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-link:hover {
+    color: #9bd4ac;
+    text-decoration: underline;
+}
+
+/* Social links */
+.footer-subtitle {
+    max-width: 380px;
+    margin: -5px 0 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.footer-links {
+    width: 100%;
+    max-width: 420px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.footer-links li > i {
+    margin-top: 5px;
+    color: #9bd4ac;
+    font-size: 1.2rem;
+}
+
+.footer-links li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-link-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+/* Copyright strip */
+.footer-bottom {
+    padding: 18px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+}
+
 /* Mobile */
+@media (max-width: 767px) {
+    .footer-container {
+        padding-top: 35px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .footer-column {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-title {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .footer-info,
+    .footer-links {
+        max-width: 100%;
+    }
+
+    .footer-text {
+        justify-content: flex-start;
+    }
+
+    .footer-links li {
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   RESPONSIVE / MOBILNI PRIKAZ
+======================================== */
+
+/* Tableti i manji ekrani */
+
+@media (max-width: 991.98px) {
+    .site-navbar .navbar-nav {
+        padding: 8px 0 12px;
+    }
+
+    .site-navbar .navbar-nav .nav-link {
+        margin: 3px 0;
+        padding: 10px;
+    }
+
+    .site-navbar .navbar-nav .nav-link:hover,
+    .site-navbar .navbar-nav .nav-link:focus-visible {
+        transform: none;
+    }
+}
+
+/* Telefoni */
+
 @media (max-width: 767.98px) {
     .site-footer .container {
         padding-top: 2rem;
@@ -161,5 +496,372 @@
 
     .footer-divider {
         margin: 1.5rem 0 1rem;
+    }
+}
+
+/* Uski ekrani */
+
+@media (max-width: 576px) {
+    .book-pages {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .language-buttons {
+        gap: 6px;
+    }
+
+    .language-buttons .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .site-navbar .navbar-brand-title {
+        font-size: 1.35rem !important;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Landing Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+    margin: auto;
+    overflow: hidden;
+
+    /* Replace with your mosque and garden image */
+    background-image: url('/src/assets/dzamija-basta.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for readable text */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(35, 25, 15, 0.78),
+        rgba(20, 83, 45, 0.55)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    color: #fff;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-buttons .hero-btn-primary,
+.hero-buttons .hero-btn-secondary {
+    background-color: transparent !important;
+    color: #fff !important;
+    border: 2px solid transparent !important;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none !important;
+    transition: all 0.25s ease;
+}
+
+.hero-buttons .hero-btn-primary:hover,
+.hero-buttons .hero-btn-secondary:hover {
+    background-color: #fff !important;
+    color: #5a3c1a !important;
+    border-color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 400px;
+        padding: 50px 16px;
+        margin: 12px auto;
+        border-radius: 8px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero-description {
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* ============================
+   DUA SECTION
+============================ */
+
+.dua-section {
+    width: 100%;
+    padding: 60px 4%;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f7faf6 100%
+    );
+}
+
+.dua-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Main card: two columns */
+.dua-content {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 50px;
+
+    padding: 50px 55px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(90, 60, 26, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(35, 55, 35, 0.07);
+}
+
+/* ============================
+   LEFT: TRANSLATION
+============================ */
+
+.dua-translation {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 35px 30px;
+
+    text-align: center;
+    background: rgba(155, 212, 172, 0.13);
+
+    border-left: 4px solid #9bd4ac;
+    border-radius: 0 14px 14px 0;
+}
+
+.translation-label {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: #5a3c1a;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.translation-label i {
+    margin-right: 7px;
+    color: #14532d;
+}
+
+.quote-mark {
+    display: block;
+    height: 38px;
+
+    color: #14532d;
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: 1;
+    opacity: 0.35;
+}
+
+.dua-translation blockquote {
+    margin: 10px 0 22px;
+
+    color: #5a3c1a;
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.quote-divider {
+    width: 55px;
+    height: 2px;
+    margin: 0 auto 16px;
+
+    background: #9bd4ac;
+}
+
+.dua-reference {
+    margin: 0;
+
+    color: #5a3c1a;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    opacity: 0.7;
+}
+
+/* ============================
+   RIGHT: ARABIC DUA
+============================ */
+
+.dua-arabic {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.dua-label {
+    display: block;
+    margin-bottom: 25px;
+
+    color: #5a3c1a;
+    font-size: 15px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.arabic-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.arabic-text {
+    margin: 0;
+
+    color: #14532d;
+    font-family: "Amiri", "Traditional Arabic", serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1.9;
+}
+
+.arabic-line img {
+    display: block;
+    width: 42px;
+    height: auto;
+    flex-shrink: 0;
+    margin: 0;
+    opacity: 0.85;
+}
+
+.dua-transliteration {
+    margin: 22px 0 0;
+
+    color: #5a3c1a;
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    opacity: 0.75;
+    text-align: center;
+}
+
+/* ============================
+   MOBILE RESPONSIVENESS
+============================ */
+
+@media (max-width: 650px) {
+    .dua-section {
+        padding: 35px 15px;
+    }
+
+    .dua-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding: 25px 16px;
+        border-radius: 15px;
+    }
+
+    .dua-arabic {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 10px 0 20px;
+    }
+
+    .dua-translation {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 28px 18px;
+    }
+
+    .arabic-text {
+        font-size: 2.7rem;
+    }
+
+    .arabic-line {
+        gap: 8px;
+    }
+
+    .arabic-line img {
+        width: 36px;
+    }
+
+    .dua-translation blockquote {
+        font-size: 1.2rem;
     }
 }
