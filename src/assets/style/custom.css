@@ -36,6 +36,10 @@ body {
     font-size: 15px;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 /* ========================================
    ARAPSKI TEKST
 ======================================== */
@@ -157,6 +161,26 @@ body {
         width: 100%;
     }
 }
+
+@media (min-width: 992px) {
+    /* undo the previous absolute-centering if you added it */
+    .site-navbar .container-fluid {
+      position: static;
+      flex-direction: column;   /* stack title and menu vertically */
+      align-items: center;
+    }
+  
+    .site-navbar .navbar-brand-title {
+      position: static;
+      transform: none;
+      margin-bottom: 0.5rem;    /* space between title and menu */
+    }
+  
+    .site-navbar .navbar-collapse {
+      width: 100%;              /* let the menu take the full row below */
+      justify-content: center;  /* keep links centered */
+    }
+  }
 
 
 /* Dova na mobilnim uređajima */
@@ -629,6 +653,7 @@ body {
 .hero-buttons .hero-btn-secondary {
     background-color: transparent !important;
     color: #fff !important;
+    font-size: 1.5rem;
     border: 2px solid transparent !important;
     padding: 12px 22px;
     border-radius: 7px;
@@ -739,9 +764,8 @@ body {
 .translation-label {
     display: inline-block;
     margin-bottom: 20px;
-
     color: #5a3c1a;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     letter-spacing: 0.5px;
     opacity: 0.8;
 }
@@ -844,9 +868,8 @@ body {
 
 .dua-transliteration {
     margin: 22px 0 0;
-
     color: #5a3c1a;
-    font-size: 1rem;
+    font-size: 1.32rem;
     font-style: italic;
     letter-spacing: 1.5px;
     opacity: 0.75;
@@ -895,5 +918,191 @@ body {
 
     .dua-translation blockquote {
         font-size: 1.2rem;
+    }
+}
+
+
+/* Introduction card */
+.intro-card {
+    max-width: 800px;
+    margin: 36px auto;
+    padding: 42px 46px;
+    background: #fffefa;
+    color: #453b32;
+    border: 1px solid #e8e1d5;
+    border-top: 5px solid #52764b;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(67, 54, 39, 0.08);
+    line-height: 1.9;
+}
+
+/* Heading */
+.intro-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.intro-label {
+    display: inline-block;
+    color: #52764b;
+    background: #edf3e9;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.intro-heading h1 {
+    color: #52764b;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.intro-heading-line {
+    width: 68px;
+    height: 3px;
+    margin: 0 auto 16px;
+    background: #b69a69;
+    border-radius: 5px;
+}
+
+.intro-subtitle {
+    color: #81766a;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+/* Main text */
+.intro-body p {
+    text-align: justify;
+    margin-bottom: 22px;
+    font-size: 1rem;
+}
+
+.intro-body-arabic p {
+    text-align: right;
+    margin-bottom: 22px;
+    font-size: 1rem;
+}
+
+.intro-body strong {
+    font-weight: 700;
+}
+
+.highlight-green {
+    color: #426c3d;
+}
+
+.highlight-brown {
+    color: #936b3e;
+    background: #f7f0e5;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* Highlighted information blocks */
+.intro-highlight {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin: 28px 0;
+    padding: 20px 22px;
+    background: #f0f5ed;
+    border-left: 4px solid #66845b;
+    border-radius: 8px;
+}
+
+.intro-highlight-warm {
+    background: #f8f2e9;
+    border-left-color: #b69a69;
+}
+
+.intro-highlight-icon {
+    flex-shrink: 0;
+    color: #66845b;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.intro-highlight-warm .intro-highlight-icon {
+    color: #a17b4e;
+}
+
+.intro-highlight h2 {
+    color: #42633c;
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.intro-highlight-warm h2 {
+    color: #805f3c;
+}
+
+.intro-highlight p {
+    margin-bottom: 0;
+    font-size: 0.96rem;
+}
+
+/* Closing prayer */
+.intro-closing {
+    margin-top: 32px;
+    padding: 24px 20px;
+    text-align: center;
+    background: #f5f3eb;
+    border-radius: 10px;
+    border: 1px solid #e8e1d5;
+}
+
+.intro-closing p {
+    color: #655a4c;
+    margin-bottom: 8px;
+    line-height: 1.9;
+}
+
+.closing-amin {
+    display: inline-block;
+    color: #52764b;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .intro-card {
+        margin: 16px 10px;
+        padding: 28px 20px;
+        border-radius: 12px;
+    }
+
+    .intro-heading {
+        margin-bottom: 24px;
+    }
+
+    .intro-body p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .intro-highlight {
+        gap: 10px;
+        padding: 16px 14px;
+        margin: 22px 0;
+    }
+
+    .intro-highlight h2 {
+        font-size: 1.02rem;
+    }
+
+    .intro-highlight p {
+        font-size: 0.92rem;
+    }
+
+    .intro-closing {
+        padding: 20px 14px;
     }
 }

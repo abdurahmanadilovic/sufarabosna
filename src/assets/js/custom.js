@@ -2,13 +2,9 @@
 
 // Function to go to home page
 function goHome() {
-    window.location.href = 'index.html';
+    window.location.href = 'uvod.html';
 }
 
-// Function to go to Facebook page
-function goToFbPage() {
-    window.location.href = 'https://m.facebook.com/Sufara-i-ted%C5%BEvid-osnove-testna-verzija-1992735521023625/';
-}
 
 // Function to toggle collapsible content
 function toggleCollapsible(button) {
@@ -24,7 +20,7 @@ function toggleCollapsible(button) {
 
 // Function to toggle language in the introduction page
 function toggleLanguage(lang) {
-    const languages = ['bosnian', 'english', 'russian', 'italian', 'german', 'arabic', 'swedish', 'indonesian', 'chinese', ];
+    const languages = ['bosnian', 'english', 'russian', 'italian', 'german', 'arabic', 'swedish', 'turkish', 'indonesian', 'chinese', ];
     languages.forEach(l => {
         const content = document.getElementById(`${l}Content`);
         const button = document.getElementById(`${l}Btn`);
