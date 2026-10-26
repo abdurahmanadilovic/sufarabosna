@@ -582,7 +582,7 @@ body {
 /* Landing Hero Section */
 .hero-section {
     position: relative;
-    min-height: 540px;
+    min-height: 740px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,9 +591,8 @@ body {
     overflow: hidden;
 
     /* Replace with your mosque and garden image */
-    background-image: url('/src/assets/dzamija-basta.jpg');
+    background-image: url('/src/assets/zbirnatabelafinal.jpg');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
 }
 
