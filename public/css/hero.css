@@ -113,14 +113,24 @@
         line-height: 1.6;
     }
 
+    /* Keep both buttons side by side on phones */
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
         width: 100%;
     }
 
     .hero-buttons .btn {
-        width: 100%;
-        max-width: 224px;
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 8px 6px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .hero-buttons .btn i {
+        margin-right: 4px !important;
     }
 }
 
@@ -151,10 +161,18 @@
 
 .hero-dua-translation {
     margin: 0;
-    font-size: 1.064rem;
+    font-size: 1.23rem;
     font-style: italic;
+    font-weight: 600;
     line-height: 1.5;
     color: #f5f5f5;
+}
+
+.hero-dua-source {
+    margin: 6px 0 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .hero-dua-divider {
