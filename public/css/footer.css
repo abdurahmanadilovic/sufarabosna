@@ -243,3 +243,18 @@
         justify-content: center;
     }
 }
+
+/* Authorship lines in the footer */
+.footer-bottom .footer-author {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.footer-bottom .footer-author strong {
+    color: var(--color-green);
+}
+
+.footer-bottom .footer-credit {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.8rem;
+}
