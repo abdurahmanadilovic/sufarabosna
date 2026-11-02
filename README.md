@@ -1,39 +1,31 @@
-# Static HTML Site
+# Sufara i tedžvid osnove
 
-This is a static HTML site built with Bootstrap 5, featuring responsive design and reusable components.
-
-## Features
-
-- Static HTML/CSS/JS implementation with no server-side dependencies
-- Mobile-friendly responsive design using Bootstrap 5
-- Reusable components with HTML includes
+Static website (HTML + CSS + a little JavaScript, Bootstrap 5 from a CDN) deployed with GitHub Pages at https://sufarabosna.ba.
 
 ## Structure
 
-- `index.html` - Home page with introduction and navigation
-- `zbirna-tabela.html` - Comprehensive table of Arabic letters
-- `pojedinacne-tabele.html` - Individual tables for Arabic letters
-- `zabiljeske.html` - Notes page
-- `uvod.html` - Introduction page
-- `dzenazetska-dova.html` - Prayer page
-- `ajeti-za-izlijecenje.html` - Healing verses page
-- `redzebskenafile.html` - Redžebske nafile page
-- `kursarapskog.html` - Arabic language course page
-- `header.html` - Reusable header component
-- `src/assets/` - Contains all assets:
-  - `src/assets/style/custom.css` - Custom CSS styles
-  - `src/assets/js/custom.js` - Custom JavaScript
-  - `src/assets/js/include.js` - JavaScript for HTML includes
-  - `src/assets/images/` - Image files
+```
+index.html, zbirna-tabela.html, ...   One HTML file per page (kept in the root so URLs never change)
+CNAME                                 Custom domain for GitHub Pages
+public/
+  css/        Site styles, loaded in this order (the order matters):
+              base, header, components, footer, responsive, hero, dua, intro
+  js/         main.js (collapsibles, language switch, tooltips)
+              include.js (loads header/footer partials, marks the active menu link)
+  fonts/      KuranKerimFontAbay.ttf (Arabic font)
+  images/     Images grouped by page/topic (tables, tajweed, dove, zabiljeske, ...)
+  docs/       PDF documents
+  partials/   header.html and footer.html, shared by every page
+archive/      Files no page uses any more (kept in case they are needed again)
+```
 
-## Usage
 
-To view the site, simply open `index.html` in any modern web browser. No server is required.
+## Running locally
 
-## Development
+The header/footer are loaded with `fetch`, so open the site through a local server rather than by double-clicking the file:
 
-- Built with Bootstrap 5.3.0
-- Uses Font Awesome 6.4.0 for icons
-- Custom CSS for additional styling
-- Custom JavaScript for interactive elements
-- HTML includes for reusable components 
+```bash
+python -m http.server 8000
+```
+
+Then visit http://localhost:8000.
