@@ -78,9 +78,9 @@
 .hero-buttons .hero-btn-secondary {
     background-color: transparent !important;
     color: #fff !important;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: 2px solid transparent !important;
-    padding: 12px 22px;
+    padding: 10px 18px;
     border-radius: 7px;
     font-weight: 600;
     text-decoration: none;
@@ -120,7 +120,7 @@
 
     .hero-buttons .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 224px;
     }
 }
 
@@ -151,10 +151,17 @@
 
 .hero-dua-translation {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.064rem;
     font-style: italic;
     line-height: 1.5;
     color: #f5f5f5;
+}
+
+.hero-dua-divider {
+    width: 55px;
+    height: 2px;
+    margin: 12px auto;
+    background: var(--color-green);
 }
 
 /* Keep the heading and description on one line each on wide screens */

@@ -65,7 +65,6 @@
     display: block;
     width: 100%;
     background: #fff;
-    border: 3px solid var(--color-brown);
     border-radius: 10px;
     box-shadow: 0 8px 28px rgba(35, 25, 15, 0.22);
 }
@@ -75,4 +74,24 @@
         padding-left: 28px;
         padding-right: 28px;
     }
+}
+
+/* Zbirna tabela: image spans the whole browser width */
+.table-page-full {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.table-page-full .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.table-page-full .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.table-page-full .table-image {
+    border-radius: 0;
 }
