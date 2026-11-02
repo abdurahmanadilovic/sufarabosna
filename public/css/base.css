@@ -1,0 +1,63 @@
+:root {
+    --color-brown: #5a3c1a;
+    --color-brown-light: #76532f;
+    --color-green: #9bd4ac;
+    --color-page-bg: #cae6cf;
+}
+
+/* ========================================
+   OSNOVNI STILOVI
+======================================== */
+body {
+    font-family: "Outfit", sans-serif !important;
+    background-color: var(--color-page-bg) !important;
+}
+
+
+.text-brown {
+    color: var(--color-brown) !important;
+}
+
+.text-brown:hover {
+    color: var(--color-brown-light) !important;
+}
+
+.border-brown {
+    border-color: var(--color-brown) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+.medium-text {
+    font-size: 15px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* ========================================
+   ARAPSKI TEKST
+======================================== */
+
+@font-face {
+    font-family: 'KuranKerimFontAbay';
+    src: url('../fonts/KuranKerimFontAbay.ttf') format('truetype');
+    font-display: swap;
+}
+
+.arabic-text {
+    font-family: 'KuranKerimFontAbay', serif;
+    direction: rtl;
+    font-size: 24px;
+}

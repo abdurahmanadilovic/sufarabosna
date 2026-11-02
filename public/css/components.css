@@ -1,0 +1,78 @@
+/* ========================================
+   KNJIGA / PRIKAZ STRANICA
+======================================== */
+
+.book-pages {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.book-page {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #e5e5e5;
+}
+
+
+/* ========================================
+   JEZIČKA DUGMAD
+======================================== */
+
+.language-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.language-buttons .btn {
+    flex: 0 0 auto;
+    border-radius: 6px !important;
+    white-space: nowrap;
+}
+
+.language-label {
+    margin-bottom: 10px;
+    color: var(--color-brown);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.language-buttons .fi {
+    margin-right: 6px;
+    border-radius: 2px;
+}
+
+/* ========================================
+   TABELE (slike preko cijele sirine)
+======================================== */
+
+.table-page {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.table-image {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 3px solid var(--color-brown);
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(35, 25, 15, 0.22);
+}
+
+@media (min-width: 992px) {
+    .table-page {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}

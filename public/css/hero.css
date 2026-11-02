@@ -1,0 +1,248 @@
+/* Landing Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 740px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+/* Background image lives on a pseudo-element so it can zoom slowly */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/home/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: hero-zoom 24s ease-in-out infinite alternate;
+}
+
+/* Dark overlay for readable text */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(35, 25, 15, 0.78),
+        rgba(20, 83, 45, 0.55)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    color: #fff;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-buttons .hero-btn-primary,
+.hero-buttons .hero-btn-secondary {
+    background-color: transparent !important;
+    color: #fff !important;
+    font-size: 1.5rem;
+    border: 2px solid transparent !important;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none !important;
+    transition: all 0.25s ease;
+}
+
+.hero-buttons .hero-btn-primary:hover,
+.hero-buttons .hero-btn-secondary:hover {
+    background-color: #fff !important;
+    color: var(--color-brown) !important;
+    border-color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 400px;
+        padding: 50px 16px;
+        margin: 0;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero-description {
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Compact dua shown between the hero text and the buttons */
+.hero-dua {
+    max-width: 520px;
+    margin: 0 auto 28px;
+    padding: 14px 22px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+}
+
+.hero-dua-arabic {
+    margin: 0 0 4px;
+    font-family: 'KuranKerimFontAbay', serif;
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+    line-height: 1.8;
+    color: #fff;
+}
+
+.hero-dua-transliteration {
+    margin: 0 0 6px;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-dua-translation {
+    margin: 0;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: #f5f5f5;
+}
+
+/* Keep the heading and description on one line each on wide screens */
+@media (min-width: 1100px) {
+    .hero-content {
+        max-width: 1100px;
+    }
+
+    .hero-content h1,
+    .hero-description {
+        white-space: nowrap;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 3.6vw, 3.2rem);
+    }
+
+    .hero-description {
+        max-width: none;
+        font-size: 1.05rem;
+    }
+}
+
+/* ============================
+   HERO ANIMATIONS
+============================ */
+
+@keyframes hero-zoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.12); }
+}
+
+@keyframes hero-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hero-icon-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.25); }
+}
+
+.hero-badge,
+.hero-content h1,
+.hero-description,
+.hero-dua,
+.hero-buttons {
+    opacity: 0;
+    animation: hero-fade-up 0.9s ease-out forwards;
+}
+
+.hero-badge       { animation-delay: 0.1s; }
+.hero-content h1  { animation-delay: 0.3s; }
+.hero-description { animation-delay: 0.5s; }
+.hero-dua         { animation-delay: 0.7s; }
+.hero-buttons     { animation-delay: 0.9s; }
+
+.hero-badge i {
+    display: inline-block;
+    animation: hero-icon-pulse 2.4s ease-in-out infinite;
+}
+
+.hero-buttons .btn {
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-section::before,
+    .hero-badge i {
+        animation: none;
+    }
+
+    .hero-badge,
+    .hero-content h1,
+    .hero-description,
+    .hero-dua,
+    .hero-buttons {
+        opacity: 1;
+        animation: none;
+    }
+}

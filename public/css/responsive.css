@@ -1,0 +1,61 @@
+/* ========================================
+   RESPONSIVE / MOBILNI PRIKAZ
+======================================== */
+
+/* Tableti i manji ekrani */
+
+@media (max-width: 991.98px) {
+    .site-navbar .navbar-nav {
+        padding: 8px 0 12px;
+    }
+
+    .site-navbar .navbar-nav .nav-link {
+        margin: 3px 0;
+        padding: 10px;
+    }
+
+    .site-navbar .navbar-nav .nav-link:hover,
+    .site-navbar .navbar-nav .nav-link:focus-visible {
+        transform: none;
+    }
+}
+
+/* Telefoni */
+
+@media (max-width: 767.98px) {
+    .site-footer .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-title {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-divider {
+        margin: 1.5rem 0 1rem;
+    }
+}
+
+/* Uski ekrani */
+
+@media (max-width: 576px) {
+    .book-pages {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .language-buttons {
+        gap: 6px;
+    }
+
+    .language-buttons .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .site-navbar .navbar-brand-title {
+        font-size: 1.35rem !important;
+        letter-spacing: 0.5px;
+    }
+}
